@@ -66,12 +66,12 @@ def getResponse(ints, intents_json):
 def chatbot_response(msg):
     ints = predict_class(msg, model)
     response = getResponse(ints, intents)
-    print(response)
+    # print(response)
     return response
 
 def res(request,msg):
     response=chatbot_response(msg)
-    print(msg)
+    # print(msg)
     return JsonResponse({"res":response})
 
 def bot(request):
